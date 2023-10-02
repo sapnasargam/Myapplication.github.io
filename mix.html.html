@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>job application form</title>
+    <style>
+        *{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    background-color:rgb(245, 243, 243);
+}
+
+.container{
+    margin:0 auto;
+    width: 900px;
+}
+.apply{
+    background:linear-gradient(rgb(218, 162, 162),rgb(145, 145, 203)) ;
+    max-width:600px;
+    margin:0 auto;
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 4px 3px 5px rgb(95, 92, 92);
+    border-radius: 10px;
+}
+.title_small{
+    font-size: 17px;
+}
+.form_container{
+    margin-top: 20px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+.form_control{
+    display:flex;/*space ke liye*/
+    flex-direction:column;/*arrangement ke liye */
+}
+label{
+    font-size: 15px;
+    margin-bottom:5px;
+}
+select,
+input,
+textarea{
+    padding: 6px 10px;
+    border:1px solid #CCC;
+    border-radius:4px;
+    font-size: 15px;
+}
+input:focus{
+    outline-color:red;
+}
+.button.container{
+    display:flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+button{
+    background-color:red;
+    margin-top: 20px;
+    border:transparent solid 2px;
+    color:whitesmoke; 
+    border-radius:5px;
+    transition:0.3s;
+
+}
+button:hover{
+    background-color: #CCC;
+    border-color: 3px solid blue;
+    color:black;
+    transition:0.3s;
+    cursor: pointer;
+
+}
+.textarea_control{
+    grid-column: 1/span 2;;
+
+}
+.textarea_control textarea{
+     width:100%;
+}
+@media(max-width:460px){
+    .textarea_control{
+        grid-column: 1/span 2;;
+    
+    }
+}
+
+
+
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="apply">
+            <h1>
+                Job Application 
+                <span class="title_small">(Web)</span>
+            </h1>
+            <form action="">
+                <div class="form_container">
+                    <div class="form_control">
+                      <label for="first name">First Name</label>
+                      <input id="first name" name="first name" placeholder="Enter First Name.."></input>
+                    </div>
+                    <div class="form_control">
+                        <label for="Last name">Last Name</label>
+                        <input id="Last name" name="last name" placeholder="Enter Last Name.."></input>
+                    </div>
+                    <div class="form_control">
+                        <label for="Email">Email</label>
+                        <input type="Email" id="Last name" name="email" placeholder="Enter email.."></input>
+                     </div>
+                     <div class="form_control">
+                        <label for="Job role"> Job role</label>
+                        <select id="Job role" name="job role">
+                            <option value="">Select job role</option>
+                            <option value="frontend">frontend developer</option>
+                            <option value="Backend">Backend developer</option>
+                            <option value="Full stack">java developer</option>
+                            <option value="ui,ux">Developer</option>
+                        </select>
+                    </div>
+                    <div class="textarea_control">
+                        <label for="Address">Address</label>
+                        <textarea id="Address" name="Address" row="4" col="50"placeholder="Enter Address"></textarea>
+                    </div>
+                    <div class="form_control">
+                        <label for="Pincode">Pincode</label>
+                        <input type="number" id="Pincode"  placeholder="Enter Pincode.."></input>
+                    </div>
+                    <div class="form_control">
+                        <label for="Date">Date</label>
+                        <input value="2022-11-07" type="Date" id="Date"></input>
+                    </div>
+                    <div class="form_control">
+                        <label for="file">Upload your CV</label>
+                        <input type="file" id="file"></input>
+                    </div>
+                 </div>
+                <div class="Button container">
+                    <button type="Submit" >Apply Now</button>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
